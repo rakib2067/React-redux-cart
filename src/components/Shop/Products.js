@@ -4,13 +4,13 @@ import classes from "./Products.module.css";
 const Products = (props) => {
   const productItems = [
     {
-      itemId: Math.random().toString(30),
+      itemId: "p1",
       title: "Test",
       price: 6,
       description: "This is a first product - amazing!",
     },
     {
-      itemId: Math.random().toString(30),
+      itemId: "p2",
       title: "Item 2",
       price: 9,
       description: "Second item on list",
@@ -23,6 +23,7 @@ const Products = (props) => {
         {productItems.map((item) => {
           return (
             <ProductItem
+              key={item.itemId}
               itemId={item.itemId}
               title={item.title}
               price={item.price}

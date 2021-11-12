@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import classes from "./CartItem.module.css";
 import { cartActions } from "../../store/cartSlice";
 const CartItem = (props) => {
-  const { title, quantity, total, price, itemId } = props.item;
+  const { title, quantity, totalPrice, price, itemId } = props.item;
 
   const dispatch = useDispatch();
   const addHandler = () => {
@@ -23,7 +23,8 @@ const CartItem = (props) => {
       <header>
         <h3>{title}</h3>
         <div className={classes.price}>
-          ${total} <span className={classes.itemprice}>(${price}/item)</span>
+          ${totalPrice}
+          <span className={classes.itemprice}>(${price}/item)</span>
         </div>
       </header>
       <div className={classes.details}>

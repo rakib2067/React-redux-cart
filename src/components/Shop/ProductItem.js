@@ -8,7 +8,7 @@ const ProductItem = (props) => {
   const { title, price, description, itemId } = props;
 
   const item = {
-    id: itemId,
+    itemId: itemId,
     price: price.toFixed(2),
     title: title,
   };
